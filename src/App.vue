@@ -1,5 +1,12 @@
 <template>
   <div id="app">
+    <nav>
+      <fieldset>
+        <label><input type="radio" name="lang" />🇬🇧</label>
+        <label><input type="radio" name="lang" />🇷🇺</label>
+      </fieldset>
+      <a :href="downloadLink.href">{{ downloadLink.label }}</a>
+    </nav>
     <header>
       <main>
         <h1>{{ career }}</h1>
@@ -28,8 +35,7 @@
       </address>
     </header>
     <main></main>
-    <footer>
-    </footer>
+    <footer></footer>
   </div>
 </template>
 
@@ -40,13 +46,14 @@ export default {
   data() {
     return {
       career: "Fullstack software developer",
+      downloadLink: { label: "Download in PDF", href: "" },
       qualification: { label: "Qualification", value: "Middle" },
       name: "Aleksey Merkuliev",
       age: "26 years",
       place: "Moscow, Russia",
       sex: "Male",
       contacts: {
-        phone: { label: "☎️+7(903)730-34-45", link: "tel:+79037303445" },
+        phone: { label: "☎️+7(903)730-34-45", href: "tel:+79037303445" },
         mail: {
           label: "📧almerk.work@gmail.com",
           href: "mailto:almerk.work@gmail.com",
@@ -77,12 +84,28 @@ export default {
   color: var(--accent-color);
   overflow-y: auto;
 }
+#app a {
+  color:inherit;
+  text-decoration:none;
+}
+#app a:hover{
+  text-decoration: underline;
+}
+#app > nav {
+  background: var(--accent-color);
+  color: white;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+}
+#app > nav fieldset {
+  border: none;
+}
 #app > header > * {
   margin: 0.3em;
 }
 #app > header {
-  position: sticky;
-  top: 0;
   box-shadow: 0 2px 2px var(--accent-color);
   display: flex;
   flex-direction: row;
@@ -90,8 +113,8 @@ export default {
   padding: 0.5em;
   flex-wrap: wrap;
 }
-#app > header main{
-  display:flex;
+#app > header main {
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
