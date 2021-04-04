@@ -5,67 +5,70 @@
         <label><input type="radio" name="lang" />🇬🇧</label>
         <label><input type="radio" name="lang" />🇷🇺</label>
       </fieldset>
-      <a :href="downloadLink.href">{{ downloadLink.label }}</a>
+      <a @click="generatePdf">pdf</a>
     </nav>
-    <header>
-      <main>
-        <h1>{{ career }}</h1>
-        <h2>{{ name }}</h2>
-        <span class="qualification"
-          >{{ qualification.label }}:&nbsp;<strong>{{
-            qualification.value
-          }}</strong></span
-        >
-      </main>
-      <figure>
-        <img id="profile" role="img" src="./assets/Me.jpg" :alt="name" />
-        <figcaption>
-          <ul>
-            <li>{{ sex }}, {{ age }}</li>
-            <li>{{ place }}</li>
-          </ul>
-        </figcaption>
-      </figure>
-      <address>
-        <ul>
-          <li v-for="(contact, i) in contacts" :key="i">
-            <a :href="contact.href">{{ contact.label }}</a>
-          </li>
-        </ul>
-      </address>
-    </header>
-    <main></main>
-    <footer></footer>
+    <vue-html2pdf
+      :show-layout="false"
+      :float-layout="false"
+      :enable-download="true"
+      :preview-modal="false"
+      :paginate-elements-by-height="1400"
+      filename="Aleksey_Merkuliev"
+      :pdf-quality="2"
+      :manual-pagination="false"
+      pdf-format="a4"
+      pdf-orientation="landscape"
+      pdf-content-width="800px"
+      @progress="onProgress($event)"
+      @hasStartedGeneration="hasStartedGeneration()"
+      @hasGenerated="hasGenerated($event)"
+      ref="html2Pdf">
+      <section slot="pdf-content">
+        <data-component :info="info"></data-component>
+      </section>
+    </vue-html2pdf>
   </div>
 </template>
 
 <script>
+import VueHtml2pdf from "vue-html2pdf";
+import dataComponent from "./components/data.vue";
 export default {
   name: "App",
-  components: {},
+  components: {
+    VueHtml2pdf,
+    dataComponent,
+  },
   data() {
     return {
-      career: "Fullstack software developer",
-      downloadLink: { label: "Download in PDF", href: "" },
-      qualification: { label: "Qualification", value: "Middle" },
-      name: "Aleksey Merkuliev",
-      age: "26 years",
-      place: "Moscow, Russia",
-      sex: "Male",
-      contacts: {
-        phone: { label: "☎️+7(903)730-34-45", href: "tel:+79037303445" },
-        mail: {
-          label: "📧almerk.work@gmail.com",
-          href: "mailto:almerk.work@gmail.com",
+      info: {
+        career: "Fullstack software developer",
+        downloadLink: { label: "Download in PDF", href: "" },
+        qualification: { label: "Qualification", value: "Middle" },
+        name: "Aleksey Merkuliev",
+        age: "26 years",
+        place: "Moscow, Russia",
+        sex: "Male",
+        contacts: {
+          phone: { label: "☎️+7(903)730-34-45", href: "tel:+79037303445" },
+          mail: {
+            label: "📧almerk.work@gmail.com",
+            href: "mailto:almerk.work@gmail.com",
+          },
+          tlg: { label: "@Almerk_tlg", href: "tg://resolve?domain=Almerk_tlg" },
+          skype: {
+            label: "Skype",
+            href: "https://join.skype.com/invite/lqjQveWJBf5Q",
+          },
+          github: { label: "Github", href: "https://github.com/almerk" },
         },
-        tlg: { label: "@Almerk_tlg", href: "tg://resolve?domain=Almerk_tlg" },
-        skype: {
-          label: "Skype",
-          href: "https://join.skype.com/invite/lqjQveWJBf5Q",
-        },
-        github: { label: "Github", href: "https://github.com/almerk" },
       },
     };
+  },
+  methods: {
+    generatePdf() {
+      this.$refs.html2Pdf.generatePdf();
+    },
   },
 };
 </script>
@@ -84,11 +87,16 @@ export default {
   color: var(--accent-color);
   overflow-y: auto;
 }
-#app a {
-  color:inherit;
-  text-decoration:none;
+#app .layout-container{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
-#app a:hover{
+#app a {
+  color: inherit;
+  text-decoration: none;
+}
+#app a:hover {
   text-decoration: underline;
 }
 #app > nav {
@@ -101,47 +109,5 @@ export default {
 }
 #app > nav fieldset {
   border: none;
-}
-#app > header > * {
-  margin: 0.3em;
-}
-#app > header {
-  box-shadow: 0 2px 2px var(--accent-color);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0.5em;
-  flex-wrap: wrap;
-}
-#app > header main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-#app > header > figure {
-  display: flex;
-  flex-direction: row;
-}
-#app > header > figure ul {
-  list-style: none;
-}
-#app > header > figure ul li {
-  white-space: nowrap;
-}
-#profile {
-  max-height: 12vmin;
-  min-height: 100%;
-  width: auto;
-  border-radius: 50%;
-}
-#app address ul {
-  list-style: none;
-}
-#app address ul li {
-  font-style: normal;
-}
-#app .qualification {
-  text-transform: uppercase;
-  font-size: 0.95em;
 }
 </style>
