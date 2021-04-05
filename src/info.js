@@ -44,7 +44,7 @@ export default {
                 time: "July 2016 - June 2021 (5 years)",
                 post: "Software engineer",
                 responsibilities: [
-                    "Web applications development and support, written on ASP.NET",
+                    "Web application development and support, written on ASP.NET",
                     "Modernizing legacy web applications, written on ASP.NET Webforms",
                     "Desktop app development for OS Windows, using WPF",
                     "Process automation using lightweight .NET applications and python scripts",
@@ -102,63 +102,63 @@ export default {
             github: { label: "Github: almerk", href: "https://github.com/almerk" },
         },
         desiredJob: {
-            label: "Desired position and responsibilities",
-            values: [{ " Position": "Middle Software developer " },
+            label: "Желаемая должность и задачи",
+            values: [{ " Должность": "Middle Software developer " },
             {
-                "Responsibilities": ["Backend development using modern .NET features (ASP.NET core, LINQ, Entity framework, Docker integration)",
-                    "Frontend development using popular javascript frameworks (Vue, React)"]
-            }, "Ready for remote work", "ready for business trips only in Russia"]
+                "Задачи": ["Backend разработка с использованием современных возможностей платформы .NET (ASP.NET core, LINQ, Entity framework, интеграция с Docker)",
+                    "Frontend разработка с использованием популярных javascript фрэймворков (Vue, React)"]
+            }, "Готов к удалённой работе", "Готов к командировкам только по России"]
         },
         professionalSkills: {
-            label: "Professional skills",
+            label: "Профессиональные навыки",
             values: [
-                { "General": ["Web applications development", "Desktop app development for OS Windows, using WPF", "Writing code according to generally accepted patterns"] },
-                { "Languages": ["C#, Javascript, SQL, HTML/CSS, Python"] },
-                { "Technologies, platforms and frameworks": [".NET", "ASP.NET", "WPF", "Vue.js", "ASP.NET core", "Node.js + Express", "Docker"] },
-                { "DBMS": ["Oracle", "MsSQL", "MongoDB", "SQLite"] }
+                { "Основные": ["Web applications development", "Desktop app development for OS Windows, using WPF", "Writing code according to generally accepted patterns"] },
+                { "Языки": ["C#, Javascript, SQL, HTML/CSS, Python"] },
+                { "Технологии, платформы и фрэймворки": [".NET", "ASP.NET", "WPF", "Vue.js", "ASP.NET core", "Node.js + Express", "Docker"] },
+                { "СУБД": ["Oracle", "MsSQL", "MongoDB", "SQLite"] }
             ]
         },
         experience: {
-            label: "Experience",
+            label: "Опыт работы",
             values: {
-                place: "Public service",
-                time: "July 2016 - June 2021 (5 years)",
-                post: "Software engineer",
+                place: "Государственная служба",
+                time: "Июль 2016 - Июнь 2021 (5 лет)",
+                post: "Инженер-разработчик",
                 responsibilities: [
-                    "Web applications development and support, written on ASP.NET",
-                    "Modernizing legacy web applications, written on ASP.NET Webforms",
-                    "Desktop app development for OS Windows, using WPF",
-                    "Process automation using lightweight .NET applications and python scripts",
-                    "Initiation and participation in microservice migration process",
-                    "Deployment of CI/CD infrastucture using Gitlab tools"
+                    "Разработка и поддержка Веб приложений, написанных с использованием технологии ASP.NET",
+                    "Модернизация устаревших веб приложений, написанных на ASP.NET Webforms",
+                    "Разработка прикладных приложений для ОС семейства Windows, с использованием WPF",
+                    "Автоматизация процессов с использованием небольших .NET приложений и программ на Python",
+                    "Инициирование и участие в миграции приложения на микросервисную архитектуру",
+                    "Развёртывание инфраструктуры непрерывной интеграции и поставки при помощи средств Gitlab"
                 ],
             }
         },
         education: {
-            label: "Education",
+            label: "Образование",
             values: [
                 {
-                    time: "2011-2016 (5 years)",
-                    place: "Institute of Communication Cryptography and Informatics, FSB Academy",
-                    faculty: "Information security",
-                    degree: "Specialist"
+                    time: "2011-2016 (5 лет)",
+                    place: "Институт криптографии, связи и информатики Академии ФСБ России",
+                    faculty: "Информационной безопасности",
+                    degree: "Специалист"
                 }
             ],
         },
         knownLanguages: {
-            label: "Known languages",
+            label: "Владение языками",
             values: [
-                { "Russian": "Native" },
-                { "English": "B2 (upper intermediate)" }
+                { "Русский": "Родной" },
+                { "Английский": "B2 (upper intermediate)" }
             ]
         },
         personalSkills: {
-            label: "Personal skills",
-            values: ["Responsibility", "Desire to grow as a professional", "Sense of humor"]
+            label: "Личные качества",
+            values: ["Ответственность", "Желание профессионального роста", "Чувство юмора"]
         },
         aboutMe: {
-            label: "About me",
-            values: "I am not only changing my current place of work, but also changing my lifestyle and the way I work. In the last 2 years, I have been actively engaged in updating my own knowledge and applying it at work. Due to the contractual nature of the current work, I will be able to start new not earlier than 22/06/2021"
+            label: "Обо мне",
+            values: "В настоящий момент я не только меняю своё текущее место работы, но и меняю образ жизни. В последние 2 года я активно занимался актуализацией своих знаний и старался применять их для улучшения рабочих процессов. В силу контрактной особенности текущего места работы, смогу выйти на новое место не ранее чем 22 июня 2021г."
         }
     }
 }
