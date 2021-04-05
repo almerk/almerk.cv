@@ -77,7 +77,7 @@ export default {
         },
         aboutMe: {
             label: "About me",
-            values: "I am not only changing my current place of work, but also changing my lifestyle and the way I work. In the last 2 years, I have been actively engaged in updating my own knowledge and applying it at work. Due to the contractual nature of the current work, I will be able to start new not earlier than 22/06/2021"
+            values: "I am not only changing current place of work, but also changing my lifestyle and the way I work. In the last 2 years, I have been actively engaged in updating my own knowledge and applying it at work. Due to the contractual nature of the current work, I will be able to start new not earlier than 22/06/2021."
         }
     },
     "ru": {
@@ -112,7 +112,7 @@ export default {
         professionalSkills: {
             label: "Профессиональные навыки",
             values: [
-                { "Основные": ["Web applications development", "Desktop app development for OS Windows, using WPF", "Writing code according to generally accepted patterns"] },
+                { "Основные": ["Разработка веб приложений", "Разработка прикладных приложений для ОС семейства Windows, с использованием WPF", "Написание кода в соответсвии с паттернами разработки"] },
                 { "Языки": ["C#, Javascript, SQL, HTML/CSS, Python"] },
                 { "Технологии, платформы и фрэймворки": [".NET", "ASP.NET", "WPF", "Vue.js", "ASP.NET core", "Node.js + Express", "Docker"] },
                 { "СУБД": ["Oracle", "MsSQL", "MongoDB", "SQLite"] }
@@ -158,7 +158,7 @@ export default {
         },
         aboutMe: {
             label: "Обо мне",
-            values: "В настоящий момент я не только меняю своё текущее место работы, но и меняю образ жизни. В последние 2 года я активно занимался актуализацией своих знаний и старался применять их для улучшения рабочих процессов. В силу контрактной особенности текущего места работы, смогу выйти на новое место не ранее чем 22 июня 2021г."
+            values: "В настоящий момент я не только меняю своё текущее место работы, но и меняю образ жизни. В последние 2 года я активно занимался актуализацией своих знаний и старался применять их для улучшения рабочих процессов. В силу контрактной особенности текущего места работы, смогу выйти на новое место не ранее чем 22 июня 2021 г."
         }
     }
 }

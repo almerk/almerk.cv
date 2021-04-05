@@ -28,19 +28,46 @@
       </address>
     </header>
     <main>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore hic fugit
-      nostrum fugiat quaerat? Tenetur consequatur dicta vitae est rem nostrum
-      consequuntur modi tempore. Rerum reprehenderit voluptate aliquam cumque
-      necessitatibus.
+      <cv-section
+        v-for="(section, i) in mainSections"
+        :key="i"
+        :section="section"
+      ></cv-section>
     </main>
-    <footer></footer>
+    <footer>
+      <cv-section :section="about"></cv-section>
+    </footer>
   </div>
 </template>
 
 <script>
+import cvSection from "./cv-section.vue";
 export default {
+  components: {
+    cvSection,
+  },
   data() {
     return {};
+  },
+  computed: {
+    mainSections() {
+      return [
+        this.$t("desiredJob"),
+        this.$t("professionalSkills"),
+        this.$t("experience"),
+        this.$t("education"),
+        this.$t("knownLanguages"),
+        this.$t("personalSkills"),
+      ];
+    },
+    about() {
+      return this.$t("aboutMe");
+    },
+  },
+  watch: {
+    $route() {
+      this.$i18n.locale = this.$route.params.locale;
+    },
   },
 };
 </script>
@@ -66,7 +93,6 @@ export default {
   display: flex;
   flex-direction: row;
   padding-right: 5em;
-
 }
 #cv > header > figure ul {
   list-style: none;
@@ -91,5 +117,12 @@ export default {
 #cv .qualification {
   text-transform: uppercase;
   font-size: 0.95em;
+}
+#cv > main,
+#cv > footer {
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 </style>

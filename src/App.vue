@@ -35,24 +35,25 @@ export default {
     VueHtml2pdf,
   },
   data() {
-    return {
-      
-    };
+    return {};
   },
   methods: {
     generatePdf() {
       this.$refs.html2Pdf.generatePdf();
     },
   },
-  computed:{
-    locale(){
+  computed: {
+    locale() {
       return this.$route.params.locale || "en";
-    }
+    },
   },
   watch: {
     locale(newValue) {
       this.$i18n.locale = newValue;
     },
+    $route() {
+      this.$i18n.locale = this.$route.params.locale;
+    }
   },
 };
 </script>
@@ -63,13 +64,25 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
+html,body{
+  height: 100%;
+  width: 100%;
+}
 #app {
+  height: 100%;
+  width: 100%;
   --accent-color: #2c3e50;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--accent-color);
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+#app>.vue-html2pdf{
+  flex-shrink: 0;
+  flex-grow: 1;
 }
 #app .layout-container {
   display: flex;
