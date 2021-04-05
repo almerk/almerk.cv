@@ -11,9 +11,6 @@
 
 <script>
 export default {
-  created() {
-    console.log(this.section.label, typeof this.section.values);
-  },
   props: {
     section: Object,
   },

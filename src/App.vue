@@ -34,6 +34,9 @@ export default {
   components: {
     VueHtml2pdf,
   },
+  created(){
+    this.$i18n.locale = this.locale;
+  },
   data() {
     return {};
   },
