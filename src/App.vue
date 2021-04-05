@@ -2,22 +2,8 @@
   <div id="app">
     <nav>
       <fieldset>
-        <label title="In english"
-          ><input
-            type="radio"
-            name="lang"
-            value="en"
-            v-model="locale"
-          />🇬🇧</label
-        >
-        <label title="На русском"
-          ><input
-            type="radio"
-            name="lang"
-            value="ru"
-            v-model="locale"
-          />🇷🇺</label
-        >
+        <router-link to="/en" title="In english">🇬🇧</router-link>
+        <router-link to="/ru" title="На русском">🇷🇺</router-link>
       </fieldset>
       <a @click="generatePdf">{{ $t("pdf.label") }}</a>
     </nav>
@@ -35,7 +21,7 @@
       ref="html2Pdf"
     >
       <section slot="pdf-content">
-        <data-component></data-component>
+        <router-view></router-view>
       </section>
     </vue-html2pdf>
   </div>
@@ -43,22 +29,25 @@
 
 <script>
 import VueHtml2pdf from "vue-html2pdf";
-import dataComponent from "./components/data.vue";
 export default {
   name: "App",
   components: {
     VueHtml2pdf,
-    dataComponent,
   },
   data() {
     return {
-      locale: "en",
+      
     };
   },
   methods: {
     generatePdf() {
       this.$refs.html2Pdf.generatePdf();
     },
+  },
+  computed:{
+    locale(){
+      return this.$route.params.locale || "en";
+    }
   },
   watch: {
     locale(newValue) {

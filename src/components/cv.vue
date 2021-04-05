@@ -1,5 +1,5 @@
 <template>
-  <div id="data">
+  <div id="cv">
     <header>
       <main>
         <h1>{{ $t("career") }}</h1>
@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style>
-#data > header {
+#cv > header {
   box-shadow: 0px 2px 2px var(--accent-color), -1px 2px 2px var(--accent-color);
   display: flex;
   flex-direction: row;
@@ -54,42 +54,41 @@ export default {
   padding: 0.5em;
   flex-wrap: wrap;
 }
-#data > header > * {
+#cv > header > * {
   margin: 0.3em;
 }
-#data > header main {
+#cv > header main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-#data > header > figure {
+#cv > header > figure {
   display: flex;
   flex-direction: row;
-  min-width: 27%;
+  padding-right: 5em;
+
 }
-#data > header > figure ul {
+#cv > header > figure ul {
   list-style: none;
   width: auto;
 }
-#data > header > figure ul li {
+#cv > header > figure ul li {
   white-space: nowrap;
 }
-#data > header > figcaption {
-  /* width:25%; */
-}
+
 #profile {
   max-height: 12vmin;
   min-height: 100%;
   width: auto;
   border-radius: 50%;
 }
-#data address ul {
+#cv address ul {
   list-style: none;
 }
-#data address ul li {
+#cv address ul li {
   font-style: normal;
 }
-#data .qualification {
+#cv .qualification {
   text-transform: uppercase;
   font-size: 0.95em;
 }
