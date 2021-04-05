@@ -2,10 +2,24 @@
   <div id="app">
     <nav>
       <fieldset>
-        <label title="In english"><input type="radio" name="lang" />🇬🇧</label>
-        <label title="На русском"><input type="radio" name="lang" />🇷🇺</label>
+        <label title="In english"
+          ><input
+            type="radio"
+            name="lang"
+            value="en"
+            v-model="locale"
+          />🇬🇧</label
+        >
+        <label title="На русском"
+          ><input
+            type="radio"
+            name="lang"
+            value="ru"
+            v-model="locale"
+          />🇷🇺</label
+        >
       </fieldset>
-      <a @click="generatePdf">{{ info.pdf.label }}</a>
+      <a @click="generatePdf">{{ $t("pdf.label") }}</a>
     </nav>
     <vue-html2pdf
       :float-layout="false"
@@ -18,13 +32,10 @@
       pdf-format="a4"
       pdf-orientation="landscape"
       pdf-content-width=""
-      @progress="onProgress($event)"
-      @hasStartedGeneration="hasStartedGeneration()"
-      @hasGenerated="hasGenerated($event)"
       ref="html2Pdf"
     >
       <section slot="pdf-content">
-        <data-component :info="info"></data-component>
+        <data-component></data-component>
       </section>
     </vue-html2pdf>
   </div>
@@ -41,34 +52,17 @@ export default {
   },
   data() {
     return {
-      info: {
-        pdf: { label: "Download in PDF" },
-        career: "Fullstack software developer",
-        downloadLink: { label: "Download in PDF", href: "" },
-        qualification: { label: "Qualification", value: "Middle" },
-        name: "Aleksey Merkuliev",
-        age: "26 years",
-        place: "Moscow, Russia",
-        sex: "Male",
-        contacts: {
-          phone: { label: "☎️+7(903)730-34-45", href: "tel:+79037303445" },
-          mail: {
-            label: "📧almerk.work@gmail.com",
-            href: "mailto:almerk.work@gmail.com",
-          },
-          tlg: { label: "@Almerk_tlg", href: "tg://resolve?domain=Almerk_tlg" },
-          skype: {
-            label: "Skype",
-            href: "https://join.skype.com/invite/lqjQveWJBf5Q",
-          },
-          github: { label: "Github", href: "https://github.com/almerk" },
-        },
-      },
+      locale: "en",
     };
   },
   methods: {
     generatePdf() {
       this.$refs.html2Pdf.generatePdf();
+    },
+  },
+  watch: {
+    locale(newValue) {
+      this.$i18n.locale = newValue;
     },
   },
 };
@@ -107,6 +101,7 @@ export default {
   top: 0;
   display: flex;
   flex-direction: row;
+  gap: 1em;
 }
 #app > nav [type="radio"] {
   position: absolute;
@@ -120,6 +115,10 @@ export default {
   clip: rect(0 0 0 0);
   overflow: hidden;
   gap: 1em;
+}
+#app label,
+#app a {
+  cursor: pointer;
 }
 #app > nav fieldset {
   border: none;

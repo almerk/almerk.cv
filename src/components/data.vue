@@ -2,26 +2,26 @@
   <div id="data">
     <header>
       <main>
-        <h1>{{ info.career }}</h1>
-        <h2>{{ info.name }}</h2>
+        <h1>{{ $t("career") }}</h1>
+        <h2>{{ $t("name") }}</h2>
         <span class="qualification"
-          >{{ info.qualification.label }}:&nbsp;<strong>{{
-            info.qualification.value
+          >{{ $t("qualification.label") }}:&nbsp;<strong>{{
+            $t("qualification.value")
           }}</strong></span
         >
       </main>
       <figure>
-        <img id="profile" role="img" src="../assets/Me.jpg" :alt="info.name" />
+        <img id="profile" role="img" src="../assets/Me.jpg" :alt="$t('name')" />
         <figcaption>
           <ul>
-            <li>{{ info.sex }}, {{ info.age }}</li>
-            <li>{{ info.place }}</li>
+            <li>{{ $t("sex") }}, {{ $t("age") }}</li>
+            <li>{{ $t("place") }}</li>
           </ul>
         </figcaption>
       </figure>
       <address>
         <ul>
-          <li v-for="(contact, i) in info.contacts" :key="i">
+          <li v-for="(contact, i) in $t('contacts')" :key="i">
             <a :href="contact.href">{{ contact.label }}</a>
           </li>
         </ul>
@@ -39,9 +39,6 @@
 
 <script>
 export default {
-  props: {
-    info: Object,
-  },
   data() {
     return {};
   },
@@ -72,7 +69,7 @@ export default {
 }
 #data > header > figure ul {
   list-style: none;
-  width:auto;
+  width: auto;
 }
 #data > header > figure ul li {
   white-space: nowrap;
