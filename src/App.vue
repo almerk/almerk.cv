@@ -2,27 +2,27 @@
   <div id="app">
     <nav>
       <fieldset>
-        <label><input type="radio" name="lang" />🇬🇧</label>
-        <label><input type="radio" name="lang" />🇷🇺</label>
+        <label title="In english"><input type="radio" name="lang" />🇬🇧</label>
+        <label title="На русском"><input type="radio" name="lang" />🇷🇺</label>
       </fieldset>
-      <a @click="generatePdf">pdf</a>
+      <a @click="generatePdf">{{ info.pdf.label }}</a>
     </nav>
     <vue-html2pdf
-      :show-layout="false"
       :float-layout="false"
       :enable-download="true"
       :preview-modal="false"
       :paginate-elements-by-height="1400"
       filename="Aleksey_Merkuliev"
       :pdf-quality="2"
-      :manual-pagination="false"
+      :manual-pagination="true"
       pdf-format="a4"
       pdf-orientation="landscape"
-      pdf-content-width="800px"
+      pdf-content-width=""
       @progress="onProgress($event)"
       @hasStartedGeneration="hasStartedGeneration()"
       @hasGenerated="hasGenerated($event)"
-      ref="html2Pdf">
+      ref="html2Pdf"
+    >
       <section slot="pdf-content">
         <data-component :info="info"></data-component>
       </section>
@@ -42,6 +42,7 @@ export default {
   data() {
     return {
       info: {
+        pdf: { label: "Download in PDF" },
         career: "Fullstack software developer",
         downloadLink: { label: "Download in PDF", href: "" },
         qualification: { label: "Qualification", value: "Middle" },
@@ -87,7 +88,7 @@ export default {
   color: var(--accent-color);
   overflow-y: auto;
 }
-#app .layout-container{
+#app .layout-container {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -106,6 +107,19 @@ export default {
   top: 0;
   display: flex;
   flex-direction: row;
+}
+#app > nav [type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  gap: 1em;
 }
 #app > nav fieldset {
   border: none;

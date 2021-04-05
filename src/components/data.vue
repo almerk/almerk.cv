@@ -28,8 +28,11 @@
       </address>
     </header>
     <main>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore hic fugit nostrum fugiat quaerat? Tenetur consequatur dicta vitae est rem nostrum consequuntur modi tempore. Rerum reprehenderit voluptate aliquam cumque necessitatibus.
-        </main>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore hic fugit
+      nostrum fugiat quaerat? Tenetur consequatur dicta vitae est rem nostrum
+      consequuntur modi tempore. Rerum reprehenderit voluptate aliquam cumque
+      necessitatibus.
+    </main>
     <footer></footer>
   </div>
 </template>
@@ -65,12 +68,17 @@ export default {
 #data > header > figure {
   display: flex;
   flex-direction: row;
+  min-width: 27%;
 }
 #data > header > figure ul {
   list-style: none;
+  width:auto;
 }
 #data > header > figure ul li {
   white-space: nowrap;
+}
+#data > header > figcaption {
+  /* width:25%; */
 }
 #profile {
   max-height: 12vmin;
