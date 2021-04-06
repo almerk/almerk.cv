@@ -50,7 +50,11 @@ article {
 article ul {
   padding-left: 1em;
 }
-article > p,article>div>p {
+article > p,
+article > div > p {
   text-indent: 1.25em;
+}
+article > *:not(h3) {
+  margin-left: 0.8em;
 }
 </style>
