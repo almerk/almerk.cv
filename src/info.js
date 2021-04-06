@@ -26,7 +26,7 @@ export default {
             {
                 "Responsibilities": ["Backend development using modern .NET features (ASP.NET core, LINQ, Entity framework, Docker integration)",
                     "Frontend development using popular javascript frameworks (Vue, React)"]
-            }, "Ready for remote work", "ready for business trips only in Russia"]
+            }, "Ready for remote work", "Ready for business trips only in Russia"]
         },
         professionalSkills: {
             label: "Professional skills",
@@ -40,10 +40,10 @@ export default {
         experience: {
             label: "Experience",
             values: {
-                place: "Public service",
-                time: "July 2016 - June 2021 (5 years)",
-                post: "Software engineer",
-                responsibilities: [
+                Place: "Public service",
+                Period: "July 2016 - June 2021 (5 years)",
+                Post: "Software engineer",
+                "": [
                     "Web application development and support, written on ASP.NET",
                     "Modernizing legacy web applications, written on ASP.NET Webforms",
                     "Desktop app development for OS Windows, using WPF",
@@ -57,10 +57,10 @@ export default {
             label: "Education",
             values: [
                 {
-                    time: "2011-2016 (5 years)",
-                    place: "Institute of Communication Cryptography and Informatics, FSB Academy",
-                    faculty: "Information security",
-                    degree: "Specialist"
+                    Period: "2011-2016 (5 years)",
+                    Institute: "Institute of Communication Cryptography and Informatics, FSB Academy",
+                    Faculty: "Information security",
+                    Level: "Specialist"
                 }
             ],
         },
@@ -77,7 +77,7 @@ export default {
         },
         aboutMe: {
             label: "About me",
-            values: "I am not only changing current place of work, but also changing my lifestyle and the way I work. In the last 2 years, I have been actively engaged in updating my own knowledge and applying it at work. Due to the contractual nature of the current work, I will be able to start new not earlier than 22/06/2021."
+            values: "In the past 2 years I have been actively updating my own knowledge and applying it at work.<br/>Due to the contractual nature of the current job, I will be able to start new one not earlier than 22/06/2021."
         }
     },
     "ru": {
@@ -121,10 +121,10 @@ export default {
         experience: {
             label: "Опыт работы",
             values: {
-                place: "Государственная служба",
-                time: "Июль 2016 - Июнь 2021 (5 лет)",
-                post: "Инженер-разработчик",
-                responsibilities: [
+                "Место": "Государственная служба",
+                "Период": "Июль 2016 - Июнь 2021 (5 лет)",
+                "Должность": "Инженер-разработчик",
+                "": [
                     "Разработка и поддержка Веб приложений, написанных с использованием технологии ASP.NET",
                     "Модернизация устаревших веб приложений, написанных на ASP.NET Webforms",
                     "Разработка прикладных приложений для ОС семейства Windows, с использованием WPF",
@@ -138,10 +138,10 @@ export default {
             label: "Образование",
             values: [
                 {
-                    time: "2011-2016 (5 лет)",
-                    place: "Институт криптографии, связи и информатики Академии ФСБ России",
-                    faculty: "Информационной безопасности",
-                    degree: "Специалист"
+                    "Период": "2011-2016 (5 лет)",
+                    "ВУЗ": "Институт криптографии, связи и информатики Академии ФСБ России",
+                    "Факультет": "Информационной безопасности",
+                    "Уровень": "Специалист"
                 }
             ],
         },
@@ -158,7 +158,7 @@ export default {
         },
         aboutMe: {
             label: "Обо мне",
-            values: "В настоящий момент я не только меняю своё текущее место работы, но и меняю образ жизни. В последние 2 года я активно занимался актуализацией своих знаний и старался применять их для улучшения рабочих процессов. В силу контрактной особенности текущего места работы, смогу выйти на новое место не ранее чем 22 июня 2021 г."
+            values: "В последние 2 года я активно занимался актуализацией своих знаний и старался применять их для улучшения рабочих процессов.<br/>В силу контрактной особенности текущего места работы, смогу выйти на новое место не ранее чем 22 июня 2021 г."
         }
     }
 }
