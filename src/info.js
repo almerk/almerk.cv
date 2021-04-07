@@ -44,7 +44,7 @@ export default {
                 Period: "July 2016 - June 2021 (5 years)",
                 Post: "Software engineer",
                 "": [
-                    "Web application development and support written on ASP.NET",
+                    "Web development and support of applications written with ASP.NET",
                     "Modernizing legacy web applications, written on ASP.NET Webforms",
                     "Desktop app development for OS Windows using WPF",
                     "Process automation using lightweight .NET applications and python scripts",
