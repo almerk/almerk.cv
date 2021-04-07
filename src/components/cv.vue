@@ -125,9 +125,9 @@ export default {
 }
 #cv > main,
 #cv > footer {
-  padding: 0.5em;
+  padding: 0.3em;
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: .6em;
 }
 </style>
