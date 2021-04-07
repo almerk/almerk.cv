@@ -5,18 +5,17 @@
         <router-link to="/en" title="In english">🇬🇧</router-link>
         <router-link to="/ru" title="На русском">🇷🇺</router-link>
       </fieldset>
-      <a @click="generatePdf">{{ $t("pdf.label") }}</a>
+      <a @click="generatePdf">{{ pdfLabel }}</a>
     </nav>
     <vue-html2pdf
       :float-layout="false"
       :enable-download="true"
       :preview-modal="false"
-      :paginate-elements-by-height="1400"
       filename="Aleksey_Merkuliev"
       :pdf-quality="2"
       :manual-pagination="true"
       pdf-format="a4"
-      pdf-orientation="landscape"
+      pdf-orientation="portrait"
       pdf-content-width=""
       ref="html2Pdf"
     >
@@ -34,7 +33,7 @@ export default {
   components: {
     VueHtml2pdf,
   },
-  created(){
+  created() {
     this.$i18n.locale = this.locale;
   },
   data() {
@@ -46,6 +45,9 @@ export default {
     },
   },
   computed: {
+    pdfLabel() {
+      return this.$t("pdf.label");
+    },
     locale() {
       return this.$route.params.locale || "en";
     },
@@ -56,7 +58,7 @@ export default {
     },
     $route() {
       this.$i18n.locale = this.$route.params.locale;
-    }
+    },
   },
 };
 </script>
@@ -67,7 +69,8 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
-html,body{
+html,
+body {
   height: 100%;
   width: 100%;
 }
@@ -83,7 +86,7 @@ html,body{
   display: flex;
   flex-direction: column;
 }
-#app>.vue-html2pdf{
+#app > .vue-html2pdf {
   flex-shrink: 0;
   flex-grow: 1;
 }

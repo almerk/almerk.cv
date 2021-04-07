@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article :class="section.classes">
     <h3 v-if="section.label">
       {{ section.label }}
     </h3>
@@ -32,11 +32,11 @@ export default {
 h3 {
   font-size: 0.8em;
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 900;
 }
 h4 {
   font-size: 1em;
-  font-weight: 200;
+  font-weight: 600;
 }
 p {
   color: black;

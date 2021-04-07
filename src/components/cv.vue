@@ -49,15 +49,20 @@ export default {
   data() {
     return {};
   },
+  methods: {
+    getSection(name, classes) {
+      return { ...this.$t(name), classes: [...(classes || []), name] };
+    },
+  },
   computed: {
     mainSections() {
       return [
-        this.$t("desiredJob"),
-        this.$t("professionalSkills"),
-        this.$t("experience"),
-        this.$t("education"),
-        this.$t("knownLanguages"),
-        this.$t("personalSkills"),
+        this.getSection("desiredJob"),
+        this.getSection("professionalSkills"),
+        this.getSection("experience", ["html2pdf__page-break"]),
+        this.getSection("education"),
+        this.getSection("knownLanguages"),
+        this.getSection("personalSkills"),
       ];
     },
     about() {

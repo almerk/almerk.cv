@@ -8,9 +8,9 @@ export default {
         place: "Moscow, Russia",
         sex: "Male",
         contacts: {
-            phone: { label: "☎️+7(903)730-34-45", href: "tel:+79037303445" },
+            phone: { label: "+7(903)730-34-45", href: "tel:+79037303445" },
             mail: {
-                label: "📧almerk.work@gmail.com",
+                label: "almerk.work@gmail.com",
                 href: "mailto:almerk.work@gmail.com",
             },
             tlg: { label: "Tg: @Almerk_tlg", href: "tg://resolve?domain=Almerk_tlg" },
@@ -77,7 +77,7 @@ export default {
         },
         aboutMe: {
             label: "About me",
-            values: "In the past two years I have been actively updating my own knowledge and applying it at work.<br/>Due to the contractual nature of the current job I will be able to start new one not earlier than 22/06/2021."
+            values: "In the past two years I have been actively updating my knowledge and applying it at work.<br/>Due to the contractual nature of the current job I will be able to start new one not earlier than 22/06/2021."
         }
     },
     "ru": {
@@ -89,9 +89,9 @@ export default {
         place: "Москва, Россия",
         sex: "Муж.",
         contacts: {
-            phone: { label: "☎️+7(903)730-34-45", href: "tel:+79037303445" },
+            phone: { label: "+7(903)730-34-45", href: "tel:+79037303445" },
             mail: {
-                label: "📧almerk.work@gmail.com",
+                label: "almerk.work@gmail.com",
                 href: "mailto:almerk.work@gmail.com",
             },
             tlg: { label: "Tg: @Almerk_tlg", href: "tg://resolve?domain=Almerk_tlg" },
