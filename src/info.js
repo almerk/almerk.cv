@@ -44,9 +44,9 @@ export default {
                 Period: "July 2016 - June 2021 (5 years)",
                 Post: "Software engineer",
                 "": [
-                    "Web application development and support, written on ASP.NET",
+                    "Web application development and support written on ASP.NET",
                     "Modernizing legacy web applications, written on ASP.NET Webforms",
-                    "Desktop app development for OS Windows, using WPF",
+                    "Desktop app development for OS Windows using WPF",
                     "Process automation using lightweight .NET applications and python scripts",
                     "Initiation and participation in microservice migration process",
                     "Deployment of CI/CD infrastucture using Gitlab tools"
@@ -77,7 +77,7 @@ export default {
         },
         aboutMe: {
             label: "About me",
-            values: "In the past 2 years I have been actively updating my own knowledge and applying it at work.<br/>Due to the contractual nature of the current job, I will be able to start new one not earlier than 22/06/2021."
+            values: "In the past two years I have been actively updating my own knowledge and applying it at work.<br/>Due to the contractual nature of the current job I will be able to start new one not earlier than 22/06/2021."
         }
     },
     "ru": {
