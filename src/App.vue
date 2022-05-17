@@ -1,11 +1,15 @@
 <template>
   <div id="app">
     <nav>
+      <a @click="generatePdf">{{ pdfLabel }}</a>
       <fieldset>
+        <label>Lang:</label>
+        &nbsp;
         <router-link to="/en" title="In english">🇬🇧</router-link>
+        &nbsp;
         <router-link to="/ru" title="На русском">🇷🇺</router-link>
       </fieldset>
-      <a @click="generatePdf">{{ pdfLabel }}</a>
+      
     </nav>
     <vue-html2pdf
       :float-layout="false"
@@ -106,10 +110,13 @@ body {
   background: var(--accent-color);
   color: white;
   position: sticky;
+  font-size: 1.1em;
   top: 0;
   display: flex;
   flex-direction: row;
   gap: 1em;
+  justify-content: space-between;
+  padding: 0 .5em;
 }
 #app > nav [type="radio"] {
   position: absolute;

@@ -30,12 +30,12 @@ export default {
 
 <style>
 h3 {
-  font-size: 0.8em;
+  font-size: .9rem;
   text-transform: uppercase;
   font-weight: 900;
 }
 h4 {
-  font-size: 1em;
+  font-size: .9em;
   font-weight: 600;
 }
 p {

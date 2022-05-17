@@ -4,11 +4,13 @@
       <main>
         <h1>{{ $t("career") }}</h1>
         <h2>{{ $t("name") }}</h2>
-        <span class="qualification"
-          >{{ $t("qualification.label") }}:&nbsp;<strong>{{
-            $t("qualification.value")
-          }}</strong></span
-        >
+        <h3> 
+          <ul class="one-line">
+            <li v-for="(keyword, i) in $t('keywords')" :key="i">
+              {{ keyword }}
+            </li>
+          </ul>
+        </h3>
       </main>
       <figure>
         <img id="profile" role="img" src="../assets/Me.jpg" :alt="$t('name')" />
@@ -34,13 +36,10 @@
         :section="section"
       ></cv-section>
     </main>
-    <footer>
-      <cv-section :section="about"></cv-section>
-    </footer>
   </div>
 </template>
 
-<script>
+s<script>
 import cvSection from "./cv-section.vue";
 export default {
   components: {
@@ -57,6 +56,7 @@ export default {
   computed: {
     mainSections() {
       return [
+        this.$t("aboutMe"),
         this.getSection("desiredJob"),
         this.getSection("professionalSkills"),
         this.getSection("experience", ["html2pdf__page-break"]),
@@ -64,9 +64,6 @@ export default {
         this.getSection("knownLanguages"),
         this.getSection("personalSkills"),
       ];
-    },
-    about() {
-      return this.$t("aboutMe");
     },
   },
   watch: {
@@ -83,7 +80,7 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0.5em;
+  padding: 1rem;
   flex-wrap: wrap;
 }
 #cv > header > * {
@@ -108,7 +105,7 @@ export default {
 }
 
 #profile {
-  max-height: 12vmin;
+  max-height: 7rem;
   min-height: 100%;
   width: auto;
   border-radius: 50%;
@@ -125,9 +122,18 @@ export default {
 }
 #cv > main,
 #cv > footer {
-  padding: 0.3em;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: .6em;
 }
+.one-line {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+.one-line > li {
+  list-style-type: none;
+}
+
 </style>
