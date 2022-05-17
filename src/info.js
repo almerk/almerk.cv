@@ -1,64 +1,80 @@
 export default {
     "en": {
         pdf: { label: "Download in PDF" },
-        career: "Fullstack software developer",
-        qualification: { label: "Qualification", value: "Middle" },
+        career: "Software developer",
         name: "Aleksey Merkuliev",
-        age: "26 y.o.",
+        age: "27 y.o.",
         place: "Moscow, Russia",
         sex: "Male",
+        keywords: [ "C#", ".NET", "ASP.NET"],
         contacts: {
             phone: { label: "+7(903)730-34-45", href: "tel:+79037303445" },
             mail: {
                 label: "almerk.work@gmail.com",
                 href: "mailto:almerk.work@gmail.com",
             },
-            tlg: { label: "Tg: @Almerk_tlg", href: "tg://resolve?domain=Almerk_tlg" },
+            tlg: { label: "Tg: @al_merk", href: "tg://resolve?domain=al_merk" },
             skype: {
                 label: "Skype: Aleksey Merkuliev",
                 href: "https://join.skype.com/invite/lqjQveWJBf5Q",
             },
             github: { label: "Github: almerk", href: "https://github.com/almerk" },
+            profiRu: { label: "PROFI.RU: MerkulevAA", href: "https://profi.ru/profile/MerkulevAA/"}
+        },
+        aboutMe: {
+            label: "Summary",
+            values: "Sotware developer for over 5 years. I like finding the best software solution for clients' problems and bringing it to life. My working day can consist of business requirements analysis and searching for the optimal software solution, as well as development of new features / correction of old ones"
         },
         desiredJob: {
             label: "Desired position and responsibilities",
-            values: [{ " Position": "Middle Software developer " },
+            values: [{ " Position": "Backend software developer " },
             {
-                "Responsibilities": ["Backend development using modern .NET features (ASP.NET core, LINQ, Entity framework, Docker integration)",
-                    "Frontend development using popular javascript frameworks (Vue, React)"]
-            }, "Ready for remote work", "Ready for business trips only in Russia"]
+                "Responsibilities": "Backend development using modern .NET features (ASP.NET core, LINQ, Entity framework, Docker integration)",
+            }, "Ready for remote work", "Ready for business trips only in Russia", "Not ready for relocation"]
         },
         professionalSkills: {
             label: "Professional skills",
             values: [
                 { "General": ["Web applications development", "Desktop app development for OS Windows, using WPF", "Writing code according to generally accepted patterns"] },
-                { "Languages": ["C#, Javascript, SQL, HTML/CSS, Python"] },
-                { "Technologies, platforms and frameworks": [".NET", "ASP.NET", "WPF", "Vue.js", "ASP.NET core", "Node.js + Express", "Docker"] },
-                { "DBMS": ["Oracle", "MsSQL", "MongoDB", "SQLite"] }
+                { "Languages": "C#, SQL, HTML/CSS, JS" },
+                { "Technologies, platforms and frameworks": ".NET, ASP.NET, WPF, Vue.js, ASP.NET core, Node.js + Express, Docker" }
             ]
         },
         experience: {
             label: "Experience",
-            values: {
-                Place: "Public service",
+            values: [{
+                Place: "PROFI.ru tutor",
                 Period: "July 2016 - June 2021 (5 years)",
-                Post: "Software engineer",
-                "": [
+                Post: "Software developer and tutor",
+                Responsibilities: [
                     "Web development and support of applications written with ASP.NET",
                     "Modernizing legacy web applications, written on ASP.NET Webforms",
                     "Desktop app development for OS Windows using WPF",
                     "Process automation using lightweight .NET applications and python scripts",
-                    "Initiation and participation in microservice migration process",
                     "Deployment of CI/CD infrastucture using Gitlab tools"
                 ],
+            },
+            {},
+            {
+                Place: "Pyrus",
+                Period: "June 2021 - for now",
+                Post: "Lead software developer",
+                Responsibilities: [
+                    "Web development and support of .NET applications",
+                    "Software design for use in highload system",
+                    "Analysis of incoming tasks, taking into account the wishes of customers",
+                    "Maintenance of working documentation"
+                ],
+
             }
+            ]
         },
         education: {
             label: "Education",
             values: [
                 {
                     Period: "2011-2016 (5 years)",
-                    Institute: "Institute of Communication Cryptography and Informatics, FSB Academy",
+                    Institute: "Institute of Communication Cryptography and Informatics",
                     Faculty: "Information security",
                     Level: "Specialist"
                 }
@@ -73,55 +89,54 @@ export default {
         },
         personalSkills: {
             label: "Personal skills",
-            values: ["Responsibility", "Desire to grow as a professional", "Sense of humor"]
-        },
-        aboutMe: {
-            label: "About me",
-            values: "In the past two years I have been actively updating my knowledge and applying it at work.<br/>Due to the contractual nature of the current job I will be able to start new one not earlier than 22/06/2021."
+            values: ["Responsibility", "Sense of humor", "Desire to grow as a professional",]
         }
     },
     "ru": {
         pdf: { label: "Скачать в PDF" },
         career: "Fullstack software developer",
-        qualification: { label: "Квалификация", value: "Middle" },
         name: "Алексей Меркульев",
-        age: "26 лет",
+        age: "27 лет",
         place: "Москва, Россия",
         sex: "Муж.",
+        keywords: [ "C#", ".NET", "ASP.NET"],
         contacts: {
             phone: { label: "+7(903)730-34-45", href: "tel:+79037303445" },
             mail: {
                 label: "almerk.work@gmail.com",
                 href: "mailto:almerk.work@gmail.com",
             },
-            tlg: { label: "Tg: @Almerk_tlg", href: "tg://resolve?domain=Almerk_tlg" },
+            tlg: { label: "Tg: @al_merk", href: "tg://resolve?domain=al_merk" },
             skype: {
                 label: "Skype: Aleksey Merkuliev",
                 href: "https://join.skype.com/invite/lqjQveWJBf5Q",
             },
             github: { label: "Github: almerk", href: "https://github.com/almerk" },
+            profiRu: { label: "PROFI.RU: MerkulevAA", href: "https://profi.ru/profile/MerkulevAA/"}
+        },
+        aboutMe: {
+            label: "Обо мне",
+            values: "Занимаюсь разработкой более 5 лет. Люблю находить лучшее программное решение задач клиента и притворять его в жизнь. Мой рабочий день может содержать как анализ бизнес требований к задачам и поиск оптимального программного решения так и разработку новых фич/корректирование старых"
         },
         desiredJob: {
             label: "Желаемая должность и задачи",
-            values: [{ " Должность": "Middle Software developer " },
+            values: [{ " Должность": "Backend Software developer " },
             {
-                "Задачи": ["Backend разработка с использованием современных возможностей платформы .NET (ASP.NET core, LINQ, Entity framework, интеграция с Docker)",
-                    "Frontend разработка с использованием популярных javascript фрэймворков (Vue, React)"]
-            }, "Готов к удалённой работе", "Готов к командировкам только по России"]
+                "Задачи": "Backend разработка с использованием современных возможностей платформы .NET (ASP.NET core, LINQ, Entity framework, интеграция с Docker)",
+            }, "Готов к удалённой работе", "Готов к командировкам только по России", "Не готов к релокации"]
         },
         professionalSkills: {
             label: "Профессиональные навыки",
             values: [
                 { "Основные": ["Разработка веб приложений", "Разработка прикладных приложений для ОС семейства Windows, с использованием WPF", "Написание кода в соответсвии с паттернами разработки"] },
-                { "Языки": ["C#, Javascript, SQL, HTML/CSS, Python"] },
-                { "Технологии, платформы и фрэймворки": [".NET", "ASP.NET", "WPF", "Vue.js", "ASP.NET core", "Node.js + Express", "Docker"] },
-                { "СУБД": ["Oracle", "MsSQL", "MongoDB", "SQLite"] }
+                { "Языки": "C#, Javascript, SQL, HTML/CSS, Python" },
+                { "Технологии, платформы и фрэймворки": ".NET, ASP.NET, WPF, Vue.js, ASP.NET core, Node.js + Express, Docker" },
             ]
         },
         experience: {
             label: "Опыт работы",
             values: {
-                "Место": "Государственная служба",
+                "Место": "PROFI.RU (part time) + государственная служба",
                 "Период": "Июль 2016 - Июнь 2021 (5 лет)",
                 "Должность": "Инженер-разработчик",
                 "": [
@@ -139,7 +154,7 @@ export default {
             values: [
                 {
                     "Период": "2011-2016 (5 лет)",
-                    "ВУЗ": "Институт криптографии, связи и информатики Академии ФСБ России",
+                    "ВУЗ": "Институт криптографии, связи и информатики",
                     "Факультет": "Информационной безопасности",
                     "Уровень": "Специалист"
                 }
@@ -155,10 +170,6 @@ export default {
         personalSkills: {
             label: "Личные качества",
             values: ["Ответственность", "Желание профессионального роста", "Чувство юмора"]
-        },
-        aboutMe: {
-            label: "Обо мне",
-            values: "В последние 2 года я активно занимался актуализацией своих знаний и старался применять их для улучшения рабочих процессов.<br/>В силу контрактной особенности текущего места работы, смогу выйти на новое место не ранее чем 22 июня 2021 г."
         }
     }
 }
