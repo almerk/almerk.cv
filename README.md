@@ -10,7 +10,7 @@ npm install
 npm run serve
 ```
 
-### Deploy to gh pages
+### Pushes to gh pages
 ```
 npm run deploy
 ```
