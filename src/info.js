@@ -23,7 +23,7 @@ export default {
         },
         aboutMe: {
             label: "Summary",
-            values: "Engaged in software development, solving specific business problems"
+            values: "Engaged in software development, solve specific business problems"
         },
         desiredJob: {
             label: "Desired position and responsibilities",
@@ -151,10 +151,10 @@ export default {
                 },
                 {},
                 {
-                    Place: "Pyrus.com",
-                    Period: "June 2021 - настоящее время",
-                    Post: "Ведущий программист",
-                    Responsibilities: [
+                    Место: "Pyrus.com",
+                    Период: "June 2021 - настоящее время",
+                    Должность: "Ведущий программист",
+                    "" : [
                         "Разработка и поддержка ASP.NET приложений",
                         "Проектирование с учётом использования в высоконагруженной системе",
                         "Анализ поступающих задач с учётом потребностей клиентов и имеющихся ресурсов",
