@@ -3,7 +3,7 @@ export default {
         pdf: { label: "Download in PDF" },
         career: "Software developer",
         name: "Aleksey Merkuliev",
-        age: "27 y.o.",
+        age: "28 y.o.",
         place: "Moscow, Russia",
         sex: "Male",
         keywords: [ "C#", ".NET", "ASP.NET"],
@@ -23,7 +23,7 @@ export default {
         },
         aboutMe: {
             label: "Summary",
-            values: "Sotware developer for over 5 years. I like finding the best software solution for clients' problems and bringing it to life. My working day can consist of business requirements analysis and searching for the optimal software solution, as well as development of new features / correction of old ones"
+            values: "Sotware developer for over 6 years. I like finding the best software solution for clients' problems and bringing it to life. My working day can consist of business requirements analysis and searching for the optimal software solution, as well as development of new features / correction of old ones"
         },
         desiredJob: {
             label: "Desired position and responsibilities",
@@ -94,9 +94,9 @@ export default {
     },
     "ru": {
         pdf: { label: "Скачать в PDF" },
-        career: "Fullstack software developer",
+        career: "Software developer",
         name: "Алексей Меркульев",
-        age: "27 лет",
+        age: "28 лет",
         place: "Москва, Россия",
         sex: "Муж.",
         keywords: [ "C#", ".NET", "ASP.NET"],
@@ -116,7 +116,7 @@ export default {
         },
         aboutMe: {
             label: "Обо мне",
-            values: "Занимаюсь разработкой более 5 лет. Люблю находить лучшее программное решение задач клиента и притворять его в жизнь. Мой рабочий день может содержать как анализ бизнес требований к задачам и поиск оптимального программного решения так и разработку новых фич/корректирование старых"
+            values: "Занимаюсь разработкой более 6 лет. Люблю находить лучшее программное решение задач клиента и притворять его в жизнь. Мой рабочий день может содержать как анализ бизнес требований к задачам и поиск оптимального программного решения так и разработку новых фич/корректирование старых"
         },
         desiredJob: {
             label: "Желаемая должность и задачи",

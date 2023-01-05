@@ -5,9 +5,9 @@
       <fieldset>
         <label>Lang:</label>
         &nbsp;
-        <router-link to="/en" title="In english">🇬🇧</router-link>
+        <router-link to="/en" title="In english">EN</router-link>
         &nbsp;
-        <router-link to="/ru" title="На русском">🇷🇺</router-link>
+        <router-link to="/ru" title="На русском">RU</router-link>
       </fieldset>
       
     </nav>
