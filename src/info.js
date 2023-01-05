@@ -6,7 +6,7 @@ export default {
         age: "28 y.o.",
         place: "Moscow, Russia",
         sex: "Male",
-        keywords: [ "C#", ".NET", "ASP.NET"],
+        keywords: ["C#", ".NET", "ASP.NET"],
         contacts: {
             phone: { label: "+7(903)730-34-45", href: "tel:+79037303445" },
             mail: {
@@ -19,11 +19,11 @@ export default {
                 href: "https://join.skype.com/invite/lqjQveWJBf5Q",
             },
             github: { label: "Github: almerk", href: "https://github.com/almerk" },
-            profiRu: { label: "PROFI.RU: MerkulevAA", href: "https://profi.ru/profile/MerkulevAA/"}
+            profiRu: { label: "PROFI.RU: MerkulevAA", href: "https://profi.ru/profile/MerkulevAA/" }
         },
         aboutMe: {
             label: "Summary",
-            values: "Sotware developer for over 6 years. I like finding the best software solution for clients' problems and bringing it to life. My working day can consist of business requirements analysis and searching for the optimal software solution, as well as development of new features / correction of old ones"
+            values: "Engaged in software development, solving specific business problems"
         },
         desiredJob: {
             label: "Desired position and responsibilities",
@@ -99,7 +99,7 @@ export default {
         age: "28 лет",
         place: "Москва, Россия",
         sex: "Муж.",
-        keywords: [ "C#", ".NET", "ASP.NET"],
+        keywords: ["C#", ".NET", "ASP.NET"],
         contacts: {
             phone: { label: "+7(903)730-34-45", href: "tel:+79037303445" },
             mail: {
@@ -112,11 +112,11 @@ export default {
                 href: "https://join.skype.com/invite/lqjQveWJBf5Q",
             },
             github: { label: "Github: almerk", href: "https://github.com/almerk" },
-            profiRu: { label: "PROFI.RU: MerkulevAA", href: "https://profi.ru/profile/MerkulevAA/"}
+            profiRu: { label: "PROFI.RU: MerkulevAA", href: "https://profi.ru/profile/MerkulevAA/" }
         },
         aboutMe: {
             label: "Обо мне",
-            values: "Занимаюсь разработкой более 6 лет. Люблю находить лучшее программное решение задач клиента и притворять его в жизнь. Мой рабочий день может содержать как анализ бизнес требований к задачам и поиск оптимального программного решения так и разработку новых фич/корректирование старых"
+            values: "Занимаюсь разработкой, решая конкретные проблемы бизнеса. Готов работать удалённо или гибридно из Москвы"
         },
         desiredJob: {
             label: "Желаемая должность и задачи",
@@ -135,19 +135,34 @@ export default {
         },
         experience: {
             label: "Опыт работы",
-            values: {
-                "Место": "PROFI.RU (part time) + государственная служба",
-                "Период": "Июль 2016 - Июнь 2021 (5 лет)",
-                "Должность": "Инженер-разработчик",
-                "": [
-                    "Разработка и поддержка Веб приложений, написанных с использованием технологии ASP.NET",
-                    "Модернизация устаревших веб приложений, написанных на ASP.NET Webforms",
-                    "Разработка прикладных приложений для ОС семейства Windows, с использованием WPF",
-                    "Автоматизация процессов с использованием небольших .NET приложений и программ на Python",
-                    "Инициирование и участие в миграции приложения на микросервисную архитектуру",
-                    "Развёртывание инфраструктуры непрерывной интеграции и поставки при помощи средств Gitlab"
-                ],
-            }
+            values: [
+                {
+                    "Место": "PROFI.RU (part time) + государственная служба",
+                    "Период": "Июль 2016 - Июнь 2021 (5 лет)",
+                    "Должность": "Инженер-разработчик",
+                    "": [
+                        "Разработка и поддержка Веб приложений, написанных с использованием технологии ASP.NET",
+                        "Модернизация устаревших веб приложений, написанных на ASP.NET Webforms",
+                        "Разработка прикладных приложений для ОС семейства Windows, с использованием WPF",
+                        "Автоматизация процессов с использованием небольших .NET приложений и программ на Python",
+                        "Инициирование и участие в миграции приложения на микросервисную архитектуру",
+                        "Развёртывание инфраструктуры непрерывной интеграции и поставки при помощи средств Gitlab"
+                    ],
+                },
+                {},
+                {
+                    Place: "Pyrus.com",
+                    Period: "June 2021 - настоящее время",
+                    Post: "Ведущий программист",
+                    Responsibilities: [
+                        "Разработка и поддержка ASP.NET приложений",
+                        "Проектирование с учётом использования в высоконагруженной системе",
+                        "Анализ поступающих задач с учётом потребностей клиентов и имеющихся ресурсов",
+                        "Документирование"
+                    ],
+
+                }
+            ]
         },
         education: {
             label: "Образование",
